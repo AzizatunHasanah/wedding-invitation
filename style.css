@@ -23,21 +23,20 @@ body {
   overflow-x: hidden;
 }
 
-section{
+section {
+  min-height: 100vh;
 
-  min-height:100vh;
+  padding: 90px 20px;
 
-  padding:90px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  text-align: center;
 
-  text-align:center;
+  position: relative;
 
-  position:relative;
-
-  overflow:hidden;
+  overflow: hidden;
 }
 
 h1,
@@ -70,9 +69,9 @@ p {
   letter-spacing: 4px;
 }
 
-img{
-  max-width:100%;
-  display:block;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* CINEMATIC INTRO */
@@ -259,47 +258,41 @@ img{
 
 /* HERO */
 
-.hero{
+.hero {
+  position: relative;
 
-  position:relative;
+  min-height: 100vh;
 
-  min-height:100vh;
-
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.hero-bg{
+.hero-bg {
+  position: absolute;
+  inset: 0;
 
-  position:absolute;
-  inset:0;
+  background-image: url("assets/images/bg1.jpg");
 
-  background-image:
-  url("assets/images/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  transition: opacity 1s ease;
 
-  transition:opacity 1s ease;
-
-  z-index:1;
+  z-index: 1;
 }
 
-.overlay{
+.overlay {
+  position: absolute;
+  inset: 0;
 
-  position:absolute;
-  inset:0;
+  background: rgba(0, 0, 0, 0.7);
 
-  background:
-  rgba(0,0,0,.70);
-
-  z-index:2;
+  z-index: 2;
 }
 
-.hero-content{
-
-  position:relative;
-  z-index:3;
+.hero-content {
+  position: relative;
+  z-index: 3;
 }
 
 .hero h1 {
@@ -335,31 +328,6 @@ img{
   position: absolute;
   inset: 0;
   pointer-events: none;
-}
-
-/* FLOWER FLOAT */
-
-.flower {
-  position: fixed;
-  top: -50px;
-  width: 40px;
-  height: 40px;
-  background: url("assets/rose.png") center/contain no-repeat;
-  pointer-events: none;
-  z-index: 999999;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  from {
-    transform: translateY(-50px) rotate(0deg);
-    opacity: 1;
-  }
-
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
 }
 
 /* BRIDE */
@@ -598,37 +566,31 @@ img{
 
 /* TIMELINE */
 
-.story-section{
-  position:relative;
+.story-section {
+  position: relative;
 }
 
-.story-line{
-  position:absolute;
-  left:50%;
-  top:200px;
+.story-line {
+  position: absolute;
+  left: 50%;
+  top: 200px;
 
-  width:2px;
-  height:70%;
+  width: 2px;
+  height: 70%;
 
-  background:
-  linear-gradient(
-    transparent,
-    #d4b483,
-    transparent
-  );
+  background: linear-gradient(transparent, #d4b483, transparent);
 }
 
-.story-item{
+.story-item {
+  width: 100%;
 
-  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  gap: 40px;
 
-  gap:40px;
-
-  margin:100px 0;
+  margin: 100px 0;
 }
 
 .story-item.left {
@@ -1193,113 +1155,106 @@ footer {
   background: #050505;
 }
 
-@media (max-width:768px){
-
+@media (max-width: 768px) {
   html,
-  body{
+  body {
+    overflow-x: hidden !important;
 
-    overflow-x:hidden !important;
-
-    width:100%;
+    width: 100%;
   }
 
-  *{
-    max-width:100%;
+  * {
+    max-width: 100%;
   }
 
-  section{
-    padding:80px 18px;
+  section {
+    padding: 80px 18px;
   }
 
-  .glass{
+  .glass {
+    width: 100%;
+    max-width: 100%;
 
-    width:100%;
-    max-width:100%;
-
-    padding:30px 20px;
+    padding: 30px 20px;
   }
 
   /* TITLE */
 
   .hero h1,
-  .couple-title{
-    font-size:3.5rem !important;
+  .couple-title {
+    font-size: 3.5rem !important;
   }
 
-  h2{
-    font-size:2.2rem !important;
+  h2 {
+    font-size: 2.2rem !important;
   }
 
   /* STORY */
 
-  .story-line{
-    display:none;
+  .story-line {
+    display: none;
   }
 
   .story-item,
   .story-item.left,
-  .story-item.right{
+  .story-item.right {
+    flex-direction: column !important;
 
-    flex-direction:column !important;
+    gap: 25px;
 
-    gap:25px;
-
-    margin:70px 0;
+    margin: 70px 0;
   }
 
   .story-image,
-  .story-content{
-    width:100%;
+  .story-content {
+    width: 100%;
   }
 
-  .story-content{
-    text-align:center;
+  .story-content {
+    text-align: center;
   }
 
-  .story-image img{
-    height:300px;
+  .story-image img {
+    height: 300px;
   }
 
   /* COUNTDOWN */
 
-  .countdown{
-    gap:12px;
+  .countdown {
+    gap: 12px;
   }
 
-  .time-box{
-
-    width:90px;
-    height:90px;
+  .time-box {
+    width: 90px;
+    height: 90px;
   }
 
-  .time-box h3{
-    font-size:2rem;
+  .time-box h3 {
+    font-size: 2rem;
   }
 
   /* EVENT */
 
-  .event-buttons{
-    flex-direction:column;
+  .event-buttons {
+    flex-direction: column;
   }
 
   /* GALLERY */
 
-  .gallery-premium{
+  .gallery-premium {
+    columns: 2 120px;
 
-    columns:2 120px;
-
-    column-gap:10px;
+    column-gap: 10px;
   }
 
   /* RSVP */
 
-  .rsvp-scroll-wrapper{
-    padding-bottom:15px;
+  .rsvp-scroll-wrapper {
+    padding-bottom: 15px;
   }
 
   .stats-box,
-  .wish-card{
-    min-width:240px;
+  .wish-card {
+    min-width: 240px;
   }
-
 }
