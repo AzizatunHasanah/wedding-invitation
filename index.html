@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Romantic Floral Wedding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CINEMATIC INTRO -->
+    <div class="cinematic-intro" id="intro">
+      <video autoplay muted loop playsinline class="intro-video">
+        <source src="assets/intro.mp4" type="video/mp4" />
+      </video>
+
+      <div class="intro-overlay"></div>
+
+      <canvas id="particles"></canvas>
+
+      <div class="intro-content">
+        <img src="assets/logo.png" class="logo" />
+
+        <p class="intro-subtitle">The Wedding Of</p>
+
+        <h1 class="couple-title">Lucky & Azizah</h1>
+
+        <p class="typing-text" id="typingText"></p>
+
+        <div class="guest-wrapper">
+          <p class="guest-label">Dear</p>
+
+          <h3 id="guestName">Nama Tamu</h3>
+        </div>
+
+        <button class="open-btn" id="openBtn">Open Invitation</button>
+      </div>
+    </div>
+
+    <!-- MUSIC -->
+    <audio id="music" loop>
+      <source src="assets/music.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="overlay"></div>
+
+      <div class="hero-content fade-up">
+        <p class="subtitle">The Wedding Of</p>
+
+        <h1>Lucky & Azizah</h1>
+
+        <p class="date">10 Juni 2026</p>
+      </div>
+    </section>
+
+    <section class="couple-section">
+      <div class="blur-orb orb1"></div>
+      <div class="blur-orb orb2"></div>
+
+      <div class="couple-wrapper">
+        <p class="section-tag fade-up">The Wedding Of</p>
+
+        <h2 class="fade-up">Bride & Groom</h2>
+
+        <!-- BRIDE -->
+
+        <div class="couple-card fade-up">
+          <div class="couple-image">
+            <img src="assets/bride.jpg" />
+          </div>
+
+          <div class="couple-content">
+            <span class="couple-role"> The Bride </span>
+
+            <h3>Azizahtun Hasanah</h3>
+
+            <p class="parents">
+              Puteri dari <br />
+              Bpk. Ali Wafa & Ibu Darmik <br />
+              Wringin - Bondowoso
+            </p>
+
+            <a href="https://www.instagram.com/azizahth_/" target="_blank" class="ig-btn"> @azizahth_ </a>
+          </div>
+        </div>
+
+        <!-- AMPERSAND -->
+
+        <div class="ampersand fade-up">&</div>
+
+        <!-- GROOM -->
+
+        <div class="couple-card fade-up">
+          <div class="couple-image">
+            <img src="assets/groom.jpg" />
+          </div>
+
+          <div class="couple-content">
+            <span class="couple-role"> The Groom </span>
+
+            <h3>Rahadyan Sonny Luckyto</h3>
+
+            <p class="parents">
+              Putera Pertama dari <br />
+              Bpk. Sutaji & Ibu Yayak Lastikawati <br />
+              Srono - Banyuwangi
+            </p>
+
+            <a href="https://www.instagram.com/luckyrahadyan/" target="_blank" class="ig-btn"> @luckyrahadyan </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+      <div class="blur-orb orb1"></div>
+      <div class="blur-orb orb2"></div>
+
+      <div class="glass luxury-card fade-up">
+        <p class="section-tag">Counting The Days</p>
+
+        <h2>Our Happy Day</h2>
+
+        <p class="section-desc">Every second brings us closer to forever.</p>
+
+        <div class="countdown" id="countdown"></div>
+      </div>
+    </section>
+
+    <!-- LOVE STORY -->
+    <section class="story-section">
+      <div class="glass luxury-card">
+        <p class="section-tag">Journey Of Love</p>
+
+        <h2>Our Love Story</h2>
+
+        <div class="story-line"></div>
+
+        <div class="story-item left fade-up">
+          <div class="story-image">
+            <img src="assets/story1.jpg" />
+          </div>
+
+          <div class="story-content">
+            <h3>First Meet</h3>
+            <p>
+              Akhir Tahun 2022 menjadi awal kami saling mengenal melalui sebuah acara kampus. Setelah itu, kami hanya sebatas saling mengikuti di media sosial tanpa percakapan yang berarti. Hingga di akhir tahun 2023, tanpa disengaja kami
+              kembali mulai berkomunikasi dan memutuskan untuk bertemu. Siapa sangka, pertemuan sederhana itu justru menjadi awal dari perjalanan cinta kami.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-item right fade-up">
+          <div class="story-image">
+            <img src="assets/story2.jpg" />
+          </div>
+
+          <div class="story-content">
+            <h3>Relationship</h3>
+            <p>
+              Seiring waktu, obrolan ringan berubah menjadi cerita panjang yang hangat. Meski jarak sering membatasi pertemuan kami, hubungan ini mengajarkan arti mencintai dengan kesabaran, kepercayaan, dan ketulusan. Perlahan kami
+              percaya, bahwa dipertemukan satu sama lain bukanlah sebuah kebetulan, melainkan jawaban dari doa-doa yang selama ini dipanjatkan.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-item left fade-up">
+          <div class="story-image">
+            <img src="assets/story3.jpg" />
+          </div>
+
+          <div class="story-content">
+            <h3>Forever</h3>
+            <p>
+              Pada 21 Desember 2025, kami memutuskan untuk bertunangan sebagai tanda keseriusan dan komitmen atas hubungan ini. Kini, dengan penuh rasa syukur dan cinta, kami siap melangkah menuju hari bahagia kami pada 10 Juni 2026,
+              memulai perjalanan baru sebagai pasangan seumur hidup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT -->
+    <section class="event-section">
+      <div class="blur-orb orb1"></div>
+      <div class="blur-orb orb2"></div>
+
+      <div class="event-wrapper">
+        <p class="section-tag fade-up">Save The Date</p>
+
+        <h2 class="fade-up">Wedding Event</h2>
+
+        <!-- AKAD -->
+
+        <div class="event-card fade-up">
+          <div class="event-top">
+            <div class="event-icon">✨</div>
+
+            <div>
+              <p class="event-label">Wedding Ceremony</p>
+
+              <h3>Akad Nikah</h3>
+            </div>
+          </div>
+
+          <div class="event-divider"></div>
+
+          <div class="event-detail">
+            <div class="detail-item">
+              <span>📅</span>
+              <p>10 Juni 2026</p>
+            </div>
+
+            <div class="detail-item">
+              <span>🕘</span>
+              <p>10.00 WIB</p>
+            </div>
+
+            <div class="detail-item">
+              <span>📍</span>
+              <p>Jambewungu, Sumber Bubu, RT 04/ RW 02, Wringin - Bondowoso</p>
+            </div>
+          </div>
+
+          <div class="event-buttons">
+            <a
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Lucky+%26+Azizah&dates=20260610T010000Z/20260610T050000Z&details=Join+our+wedding+celebration&location=Rumah+Azizah"
+              target="_blank"
+              class="event-btn"
+            >
+              Save Calendar
+            </a>
+
+            <a href="https://maps.app.goo.gl/Agod2WvtYbH5ERYL9" target="_blank" class="event-btn outline"> Open Maps </a>
+          </div>
+        </div>
+
+        <!-- RECEPTION -->
+
+        <div class="event-card fade-up">
+          <div class="event-top">
+            <div class="event-icon">🥂</div>
+
+            <div>
+              <p class="event-label">Wedding Reception</p>
+
+              <h3>Reception</h3>
+            </div>
+          </div>
+
+          <div class="event-divider"></div>
+
+          <div class="event-detail">
+            <div class="detail-item">
+              <span>📅</span>
+              <p>10 Juni 2026</p>
+            </div>
+
+            <div class="detail-item">
+              <span>🕘</span>
+              <p>14.00 WIB - Selesai</p>
+            </div>
+
+            <div class="detail-item">
+              <span>📍</span>
+              <p>Jambewungu, Sumber Bubu, RT 04/ RW 02, Wringin - Bondowoso</p>
+            </div>
+          </div>
+
+          <div class="event-buttons">
+            <a
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Lucky+%26+Azizah&dates=20260610T010000Z/20260610T050000Z&details=Join+our+wedding+celebration&location=Rumah+Azizah"
+              target="_blank"
+              class="event-btn"
+            >
+              Save Calendar
+            </a>
+
+            <a href="https://maps.app.goo.gl/Agod2WvtYbH5ERYL9" target="_blank" class="event-btn outline"> Open Maps </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+      <div class="blur-orb orb1"></div>
+      <div class="blur-orb orb2"></div>
+
+      <div class="glass luxury-card fade-up">
+        <p class="section-tag">Captured Moments</p>
+
+        <h2>Wedding Gallery</h2>
+
+        <p class="section-desc">Every photo holds a beautiful memory of our journey.</p>
+
+        <div class="gallery-premium">
+          <div class="gallery-item">
+            <img src="assets/gallery1.jpg" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/gallery2.jpg" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/gallery3.jpg" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/gallery4.jpg" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/gallery5.jpg" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/gallery6.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="gallery-modal" id="galleryModal">
+      <span class="close-modal" id="closeModal"> ✕ </span>
+
+      <img id="modalImage" />
+    </div>
+
+    <!-- LOCATION -->
+    <section>
+      <div class="glass luxury-card location-wrapper">
+        <div class="location-info">
+          <p class="section-tag">Wedding Location</p>
+
+          <h2>Location</h2>
+
+          <p>Jambewungu, Sumber Bubu, RT 04/ RW 02, Wringin - Bondowoso</p>
+
+          <button class="open-btn">Open Maps</button>
+        </div>
+
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1976.2213837930735!2d113.7814095633197!3d-7.848641558103572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6dfd6cbbb8803%3A0x32d46cdb718b6836!2sMasjid%20Nurul%20Falah!5e0!3m2!1sid!2sid!4v1779902201687!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section>
+      <div class="glass luxury-card fade-up">
+        <p class="section-tag">Wedding Gift</p>
+
+        <h2>Gift Of Love</h2>
+
+        <div class="gift-card">
+          <div class="card-chip"></div>
+
+          <p class="bank-name">BCA</p>
+
+          <h3>1200 7284 71</h3>
+
+          <p>a.n Azizahtun Hasanah</p>
+
+          <button class="event-btn">Copy Number</button>
+        </div>
+
+        <div class="gift-card">
+          <div class="card-chip"></div>
+
+          <p class="bank-name">BRI</p>
+
+          <h3>6196 0102 3732 536</h3>
+
+          <p>a.n Azizahtun Hasanah</p>
+
+          <button class="event-btn">Copy Number</button>
+        </div>
+
+        <div class="gift-card">
+          <div class="card-chip"></div>
+
+          <p class="bank-name">GOPAY</p>
+
+          <h3>0821 4298 0735</h3>
+
+          <p>a.n Azizah</p>
+
+          <button class="event-btn">Copy Number</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section">
+      <div class="blur-orb orb1"></div>
+      <div class="blur-orb orb2"></div>
+
+      <div class="glass luxury-card fade-up">
+        <p class="section-tag">Confirmation</p>
+
+        <h2>RSVP & Wishes</h2>
+
+        <p class="section-desc">Please confirm your attendance and send your best wishes.</p>
+
+        <form id="rsvpForm" class="rsvp-premium">
+          <div class="input-group">
+            <input id="name" type="text" placeholder="Your Name" required />
+          </div>
+
+          <div class="input-group">
+            <select id="attendance">
+              <option>Hadir</option>
+              <option>Tidak Hadir</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <textarea id="message" placeholder="Write your wishes..."></textarea>
+          </div>
+
+          <button class="submit-btn">Send Wishes</button>
+        </form>
+
+        <!-- TOTAL RSVP -->
+
+        <div class="rsvp-stats">
+          <div class="stats-box">
+            <h3 id="totalGuests">0</h3>
+            <p>Total Guests</p>
+          </div>
+
+          <div class="stats-box">
+            <h3 id="totalAttend">0</h3>
+            <p>Attend</p>
+          </div>
+        </div>
+
+        <!-- WISHES -->
+
+        <div class="rsvp-scroll-wrapper">
+          <!-- WISHES -->
+
+          <div id="wishContainer" class="wish-slider"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Made with Love</footer>
+
+    <canvas id="particles"></canvas>
+
+    <div class="typing-wrapper">
+      <h2 id="typingText"></h2>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script src="particles.js"></script>
+    <script src="slider.js"></script>
+    <script src="animation.js"></script>
+  </body>
+</html>
