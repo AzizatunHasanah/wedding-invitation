@@ -91,42 +91,42 @@ function animateParticles() {
 animateParticles();
 
 // COUNTDOWN
-const targetDate = new Date("2026-06-10T08:00:00").getTime();
-const countdown = document.getElementById("countdown");
+//const targetDate = new Date("2026-06-10T08:00:00").getTime();
+//const countdown = document.getElementById("countdown");
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+//setInterval(() => {
+//const now = new Date().getTime();
+//const distance = targetDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  countdown.innerHTML = `
+//countdown.innerHTML = `
 
-    <div class="time-box">
-      <h3>${days}</h3>
-      <span>Days</span>
-    </div>
+//<div class="time-box">
+//<h3>${days}</h3>
+//<span>Days</span>
+//</div>
 
-    <div class="time-box">
-      <h3>${hours}</h3>
-      <span>Hours</span>
-    </div>
+//<div class="time-box">
+//<h3>${hours}</h3>
+//<span>Hours</span>
+//</div>
 
-    <div class="time-box">
-      <h3>${minutes}</h3>
-      <span>Minutes</span>
-    </div>
+//<div class="time-box">
+//<h3>${minutes}</h3>
+//<span>Minutes</span>
+//</div>
 
-    <div class="time-box">
-      <h3>${seconds}</h3>
-      <span>Seconds</span>
-    </div>
+//<div class="time-box">
+//<h3>${seconds}</h3>
+//<span>Seconds</span>
+//</div>
 
-  `;
-}, 1000);
+//`;
+//}, 1000);
 
 // SCROLL ANIMATION
 const observer = new IntersectionObserver(
@@ -146,49 +146,34 @@ fadeElements.forEach((el) => {
   observer.observe(el);
 });
 
-const galleryItems =
-document.querySelectorAll('.gallery-item img');
+const galleryItems = document.querySelectorAll(".gallery-item img");
 
-const modal =
-document.getElementById('galleryModal');
+const modal = document.getElementById("galleryModal");
 
-const modalImage =
-document.getElementById('modalImage');
+const modalImage = document.getElementById("modalImage");
 
-const closeModal =
-document.getElementById('closeModal');
+const closeModal = document.getElementById("closeModal");
 
-galleryItems.forEach((img)=>{
-
-  img.addEventListener('click',()=>{
-
-    modal.classList.add('show');
+galleryItems.forEach((img) => {
+  img.addEventListener("click", () => {
+    modal.classList.add("show");
 
     modalImage.src = img.src;
-  })
-})
+  });
+});
 
-closeModal.addEventListener('click',()=>{
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("show");
+});
 
-  modal.classList.remove('show');
-})
+const urlParams = new URLSearchParams(window.location.search);
 
-const urlParams =
-new URLSearchParams(window.location.search);
+const guest = urlParams.get("to");
 
-const guest =
-urlParams.get('to');
+const guestName = document.getElementById("guestName");
 
-const guestName =
-document.getElementById('guestName');
-
-if(guest){
-
-  guestName.innerHTML =
-  decodeURIComponent(guest);
-
-}else{
-
-  guestName.innerHTML =
-  "Special Guest";
+if (guest) {
+  guestName.innerHTML = decodeURIComponent(guest);
+} else {
+  guestName.innerHTML = "Special Guest";
 }
